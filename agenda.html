@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Jazz muziekschool Jesse en Hannah</title>
+<link rel="stylesheet" type="text/css" href="CSS/style.css">
+<meta name="description" content="Mijn eerste webpagina">
+</head>
+<body>
+<!-- start header -->
+  <header><h1>Muziekschool H&J</h1><br<><h2>Agenda</h2></header>
+<!-- einde header -->       
+<!-- start menu -->
+  <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="overons.html">Over Ons</a></li>
+  <li><a href="tarieven.html">Tarieven</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="templates/agenda/agenda.html">Agenda</a></li>
+  </ul>
+<!-- einde menu -->
+<!-- start linkse kolom-->
+ <div class="rij">
+  <div id="inhoudeen"><h2>Adresgegevens</h2>
+   <p>Muziekschool H&J<br>
+    t.a.v Hannah en Jesse<br>
+    Industrieterrein 37<br>
+    5981 NK Panningen<br>
+    0123-456789<br>
+    muziekschoolhj@inlook.com
+    </p>
+    </div>
+<!-- einde linkse kolom -->
+<!-- start rechtse kolom -->
+  <div id="inhoudtwee"><h1>Agenda</h1> 
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Datum</th>
+                <th>Tijdstip</th>
+                <th>Omschrijving</th>
+                <th>Kosten</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in items %}
+            <tr>
+                <td>{{ item.datum }}</td>
+                <td>{{ item.tijdstip }}</td>
+                <td>{{ item.omschrijving }}</td>
+                <td>{{ item.kosten }} EUR</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<!-- einde rechtse kolom -->
+ </div>
+<!-- start footer -->
+  <footer>© Copyright 2021 Muziekschool H&J<br>
+    (Dit is een oefenopdracht, alle informatie op deze website is fictief.)
+    </footer>
+<!-- einde footer -->
+</body>
+</html>
