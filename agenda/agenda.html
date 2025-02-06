@@ -22,26 +22,34 @@
 <!-- start linkse kolom-->
  <div class="rij">
   <div id="inhoudeen"><h2>Tarieven</h2>
-    <p>Individuele les: € 30,- per half uur.</p>
-    <hr>
-    <p>Groepsles: Dezelfde prijs per persoon (dus € 30,- gedeeld door het aantal deelnemers).</p>
-    <hr>
-    <p>Groepsles kinderen: € 10,- per uur.</p>    
+   
     </div>
 <!-- einde linkse kolom -->
 <!-- start rechtse kolom -->
-  <div id="inhoudtwee"><h1>Voorwaarden</h1> 
-    <h3>Algemene voorwaarden - Muziekschool H&J</h3>
-    <b>Artikel 1:</b> Inschrijving
-    <hr>
-    <p>U kunt zich inschrijven door u aan te melden bij het bureau van de muziekschool en het inschrijfformulier te ondertekenen.</p>
-    <b>Artikel 2:</b> Duur cursusjaar
-    <hr>
-    <p>Het cursusjaar loopt van 1 september tot en met 30 juni van het volgend jaar.</p>
-    <b>Artikel 3:</b> Uitschrijving
-    <hr>
-    <p>Tussentijdse beëindiging/opzegging is uitsluitend mogelijk na een schriftelijk verzoek.</p>
+<div id="inhoudtwee"><h1>Agenda</h1> 
+  <table border="1">
+      <thead>
+          <tr>
+              <th>Datum</th>
+              <th>Tijdstip</th>
+              <th>Omschrijving</th>
+              <th>Kosten</th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for item in items %}
+          <tr>
+              <td>{{ item.datum }}</td>
+              <td>{{ item.tijdstip }}</td>
+              <td>{{ item.omschrijving }}</td>
+              <td>{{ item.kosten }} EUR</td>
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
 </div>
+
+
 <!-- einde rechtse kolom -->
  </div>
 <!-- start footer -->
